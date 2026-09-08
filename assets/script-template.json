@@ -1,0 +1,57 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-10%",
+  "_readme": [
+    "extra = 配音讲完后画面继续演示的秒数。调总时长只改这里，不要动 text（改 text 会触发重录该段）。",
+    "scene = src/scenes/index.ts registry 里登记的 key，漏登记会渲染 FallbackScene。",
+    "keyPoints = 本段要点清单，场景里通常做成视觉列表；不需要就不写。",
+    "promo 模式：s1 抛问 / s2 痛点 / s3 卖点（必须前置，用 keyPoints 列全）/ s4-sN 流程演示 / 末段收尾与许可。",
+    "generic 模式：不要照抄这套段名，按 references/narrative.md 里对应题材的骨架重写。",
+    "段落数：30s→2-3 段，60s→4-5 段，2-3min→7-9 段，5min+→10-16 段。"
+  ],
+  "note": "本片决策：16:9 / 2-3min / 截图+代码复刻 / 配音+字幕 / 发布到 GitHub+小红书+B站",
+  "segments": [
+    {
+      "id": "s1",
+      "scene": "intro",
+      "title": "抛问",
+      "extra": 0.5,
+      "text": "一句话痛点开场，最好是个问题。例：找齐一整套资料，要花多长时间？"
+    },
+    {
+      "id": "s2",
+      "scene": "pain",
+      "title": "痛点",
+      "extra": 0.5,
+      "text": "把现有办法的代价讲具体，用数字和场景，不要空泛形容词。"
+    },
+    {
+      "id": "s3",
+      "scene": "promise",
+      "title": "卖点",
+      "extra": 1.0,
+      "keyPoints": [
+        "卖点一",
+        "卖点二",
+        "卖点三",
+        "卖点四",
+        "卖点五"
+      ],
+      "text": "核心卖点单独成段、必须前置。这里逐条念完，画面同步列出要点。"
+    },
+    {
+      "id": "s4",
+      "scene": "demo1",
+      "title": "演示一",
+      "extra": 2.0,
+      "text": "第一个流程演示。讲操作和结果，不讲实现细节。"
+    },
+    {
+      "id": "s5",
+      "scene": "outro",
+      "title": "收尾",
+      "extra": 1.0,
+      "text": "开源许可、合规声明、获取方式。有第三方内容必写版权归属。"
+    }
+  ]
+}

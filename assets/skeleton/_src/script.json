@@ -1,0 +1,15 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-10%",
+  "note": "从 <skill-base>/assets/script-template.json 复制，改文案与 extra",
+  "segments": [
+    {
+      "id": "s1",
+      "scene": "example",
+      "title": "第一段",
+      "extra": 0.5,
+      "keyPoints": ["要点一", "要点二", "要点三"],
+      "text": "把这一句换成你的开场文案，然后重跑 gen_voice.py。"
+    }
+  ]
+}
