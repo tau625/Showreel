@@ -2,6 +2,8 @@
 
 **用代码写视频 —— 给软件做宣传片的完整 AI 流水线。**
 
+**[English](README.en.md)** · 中文
+
 > 展卷：宣传片就是把软件功能像卷轴一样徐徐展开，一段一段演示给人看。
 > Showreel：英文里"用来展示自己的短片"的现成说法，正是这个品类。
 
@@ -108,3 +110,7 @@ MIMO_API_KEY=<key> python scripts/mimo_tts.py "音色描述" "文本" out.mp3
 
 实例项目的视觉系统（朱砂 / 宣纸 / 墨）来自 [tau625/ShudaoLe](https://github.com/tau625/ShudaoLe)。
 背景音乐生态：Joakim Karud / Vlog No Copyright Music。
+
+## 许可
+
+[MIT](LICENSE)
