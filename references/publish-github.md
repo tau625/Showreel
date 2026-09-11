@@ -18,6 +18,12 @@ gh release upload v1.2.0 ./demo.mp4        # 可多次追加
 
 **铁律：Release 附件的 mp4 在 README 里永远只渲染成下载链接。** GitHub 的 HTML 过滤器会把 `<video>` 整个剥成空 `<p>`；只有自家 CDN（`user-images.githubusercontent.com` / `github.com/user-attachments`）上的视频才会渲染成内嵌播放器。
 
+**别想着换 CDN 绕过附件上传**（2026-09-11 逐一实测，`gh api markdown` 验证）：把 mp4 传到自己仓库再用
+`raw.githubusercontent.com` / `media.githubusercontent.com`（LFS）/ `cdn.jsdelivr.net`（jsDelivr）/
+`objects.githubusercontent.com` 当 `<video src>` —— **这四种全部被剥成空 `<p>`**，白费功夫。
+另外 `raw.githubusercontent.com` 在国内本来就被墙，就算能渲染也是给海外用户看的。
+**唯一可行路径就是走 issue 附件换 `user-attachments` 直链。**
+
 正确做法：
 
 ```bash

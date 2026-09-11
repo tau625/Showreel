@@ -46,7 +46,10 @@ ink   #2c2820 墨（正文）
 ## 声音
 
 - 配音：edge-tts `zh-CN-XiaoxiaoNeural`，`rate=-10%`。中途试过 MiMo voice design 捏音色，最终还是选了晓晓。
-- BGM：Joakim Karud - Classic，首尾 2s 淡入淡出，音量 0.12。
+- BGM：Joakim Karud - Classic。音量 0.12，淡入 2s / 淡出 4s。
+  v1.2.0 里只写了「首尾 2s」且没注意曲长——曲子 3:50 < 成片 5:00，
+  **末尾 70 秒是静音的**；v1.5.0 用 `extend_bgm.py` 交叉淡化接长到 302s 才补上
+  （详见 `script-and-voice.md` §4 的「哑巴坑」）。
 - 字幕：思源宋体 34px，无底色，四层宣纸色 `textShadow` 柔光托底。
 
 ## 关键决策记录

@@ -38,7 +38,8 @@ agent_created: true
 6. **渲染命令不接管道**（`| tail` 会全缓冲看不到进度）。一律 `> out/render.log 2>&1`，另开终端跑 `progress.py`。
 7. **视频不进 git**。`.gitignore` 加 `*.mp4`，否则几十 MB 永久留在 `.git` 历史里。
 8. **发布前逐张检查截图**是否泄露本机用户名/路径/令牌。
-9. 遇到报错先查 `<skill-base>/references/env-setup.md` §踩坑表，那里集中了本环境已验证的全部坑和解法，不要重新试错。
+9. **BGM 曲长必须 ≥ 成片时长**，接长时还要丢掉原曲自带的末尾淡出段。`<Audio>` 不循环，曲子放完就静音，而 Remotion **不报错、日志也看不出**——渲染完必须量一次音频电平（逐秒 RMS，段间留白处应 ~−28 dB）。接长方法与自检见 `references/script-and-voice.md` §4。
+10. 遇到报错先查 `<skill-base>/references/env-setup.md` §踩坑表，那里集中了本环境已验证的全部坑和解法，不要重新试错。
 
 ## 工作流程
 
